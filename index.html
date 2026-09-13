@@ -674,6 +674,21 @@ footer.note{
           <p>Yes — CISA requires <b>ongoing Continuing Professional Education (CPE) hours</b> reported annually, plus an annual maintenance fee, to keep the certification active.</p>
         </details>
         <details class="faq-item">
+          <summary>I want to build an IT-audit software that uses AI to automate the process in real time — what should I learn and do?</summary>
+          <p>This is essentially building a <b>Continuous Control Monitoring (CCM)</b> platform with AI layered on top. Here's a practical path:</p>
+          <p style="padding:0 20px 4px;"><b>1. Learn the audit domain first, not the code first.</b> You can't automate a control test you don't understand. Study <b>CISA Domain 1</b> closely — especially <b>CAATs (Computer-Assisted Audit Techniques)</b>, <b>continuous auditing/monitoring</b>, and the manual's own section on <b>AI/ML in IS audit</b> (interpreting AI results and their risk). This tells you what a "good" automated test looks like and where AI can go wrong.</p>
+          <p style="padding:0 20px 4px;"><b>2. Learn the technical stack:</b></p>
+          <ul style="margin:0 0 4px;padding:0 20px 0 44px;color:var(--ink-soft);font-size:1rem;">
+            <li><b>Python + SQL</b> — the backbone for pulling and analyzing data</li>
+            <li><b>APIs/integrations</b> — to pull real-time data from ERPs, cloud logs (AWS CloudTrail, Azure AD), ticketing systems, and SIEM tools</li>
+            <li><b>Rule engines</b> — for deterministic checks (e.g., segregation-of-duty conflicts, terminated employee still has access)</li>
+            <li><b>ML for anomaly detection</b> — to catch patterns a fixed rule would miss (unusual transaction timing, amount, or user behavior)</li>
+            <li><b>Dashboards/alerting</b> — so exceptions surface the moment they happen, not in a report weeks later</li>
+          </ul>
+          <p style="padding:0 20px 4px;"><b>3. Start narrow, not broad.</b> Pick one control (e.g., user access recertification, or duplicate vendor payments) and automate that single test end-to-end before expanding. A working narrow tool beats a half-built platform.</p>
+          <p style="padding:0 20px 18px;"><b>4. Build in auditability of the AI itself.</b> Every flagged exception needs an explainable "why," a human sign-off step, and its own audit trail — regulators and external auditors will ask "how did the AI decide this?" and "no answer" is not acceptable. This is the exact gap the CISA manual flags under AI/ML audit risk.</p>
+        </details>
+        <details class="faq-item">
           <summary>Is CISA the same as CISSP? How are they different?</summary>
           <p>No — they're different certifications for different jobs, even though both come up in security careers:</p>
           <p style="padding:0 20px 4px;"><b>Role:</b> CISA is for <b>auditors</b> — checking whether systems, controls, and processes can be trusted. CISSP is for <b>security practitioners</b> — designing, building, and running the security program itself.</p>
