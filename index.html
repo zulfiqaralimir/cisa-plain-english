@@ -272,6 +272,25 @@ main{padding:36px 0 80px;min-width:0;}
 .tips li b{color:var(--accent-strong);}
 .tips li::marker{color:var(--gold);}
 
+.faq{display:flex;flex-direction:column;gap:12px;margin-top:20px;}
+.faq-item{
+  background:var(--surface);border:1px solid var(--line);border-radius:11px;
+  overflow:hidden;
+}
+.faq-item summary{
+  list-style:none;cursor:pointer;padding:16px 20px;
+  display:flex;align-items:center;justify-content:space-between;gap:14px;
+  font-family:'Public Sans',sans-serif;font-weight:700;font-size:1.05rem;color:var(--ink);
+}
+.faq-item summary::-webkit-details-marker{display:none;}
+.faq-item summary::after{
+  content:'+';flex:none;font:400 1.4rem 'Source Serif 4',serif;color:var(--accent);
+  transition:transform .25s ease;
+}
+.faq-item[open] summary::after{transform:rotate(45deg);}
+.faq-item summary:hover{color:var(--accent-strong);}
+.faq-item p{margin:0;padding:0 20px 18px;color:var(--ink-soft);font-size:1.02rem;}
+
 footer.note{
   margin-top:60px;padding-top:20px;border-top:1px solid var(--line);
   font-size:.78rem;color:var(--ink-soft);
@@ -313,6 +332,7 @@ footer.note{
       <li><a href="#d5" data-c="5"><span class="num">05</span>Protecting Assets<span class="weight">26%</span></a></li>
       <li><a href="#glossary"><span class="num">06</span>Glossary</a></li>
       <li><a href="#tips"><span class="num">07</span>Study Tips</a></li>
+      <li><a href="#faq"><span class="num">08</span>FAQs</a></li>
     </ol>
     <div class="toc-foot">Based on the CISA Review Manual, 28th Edition — rewritten in simple language.</div>
   </nav>
@@ -589,6 +609,43 @@ footer.note{
         <li><b>Domains 4 and 5 carry over half the exam weight</b> (52% combined) — study them hardest.</li>
         <li>Practice with the CISA Review Questions manual after each domain to check whether you can <b>apply</b> the idea, not just recall it.</li>
       </ul>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="domain reveal">
+      <div class="domain-head" style="margin-bottom:20px;">
+        <div><h2 style="color:var(--accent-strong);">Frequently Asked Questions</h2></div>
+      </div>
+      <div class="faq">
+        <details class="faq-item" open>
+          <summary>Which topics do most people find the most difficult?</summary>
+          <p>Most candidates struggle most with <b>Domain 4 (Operations &amp; Business Resilience)</b> and <b>Domain 5 (Protection of Information Assets)</b> — they're the most technical, cover the widest range of topics (networking, cryptography, BCP/DRP math like RTO/RPO), and together make up <b>52%</b> of the exam. Many also find the <b>sampling and evidence calculations</b> in Domain 1 tricky at first, simply because they feel more like statistics than IT.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Do I need an IT or technical background to take CISA?</summary>
+          <p>No — CISA is aimed at auditors, so a business or accounting background works fine. You do need to eventually explain technical controls in plain terms, which is exactly what this guide is for.</p>
+        </details>
+        <details class="faq-item">
+          <summary>How much work experience do I need?</summary>
+          <p>ISACA requires <b>5 years of relevant IS audit, control, or security work experience</b> to be certified. You can take the exam first — the experience requirement can be completed within 5 years after passing.</p>
+        </details>
+        <details class="faq-item">
+          <summary>How is the exam scored?</summary>
+          <p>Scores run from <b>200 to 800</b>, and you need <b>450</b> to pass. It's a scaled score, not a raw percentage, so the exact number of correct answers needed varies slightly by exam form.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Which domain should I study first?</summary>
+          <p>Start with <b>Domain 1</b> — it teaches the audit vocabulary and mindset (evidence, risk-based planning, reporting) that the other four domains all assume you already know.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Do I need to renew the certification after passing?</summary>
+          <p>Yes — CISA requires <b>ongoing Continuing Professional Education (CPE) hours</b> reported annually, plus an annual maintenance fee, to keep the certification active.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Is CISA the same as CISSP?</summary>
+          <p>No. <b>CISA</b> focuses on auditing, controls, and governance — checking whether systems can be trusted. <b>CISSP</b> focuses on designing and running security programs. Some topics (like access control and cryptography) overlap, but the lens is different: auditor vs. practitioner.</p>
+        </details>
+      </div>
     </section>
 
     <footer class="note">Simplified study companion to the CISA Official Review Manual, 28th Edition. For full technical detail, definitions, and exam-style practice questions, refer back to the official manual and question bank.</footer>
