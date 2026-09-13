@@ -389,6 +389,10 @@ footer.note{
           <li>A good report states the <b>finding</b>, the <b>risk</b>, and a practical <b>fix</b></li>
           <li>The auditor returns later to confirm the fix actually happened</li>
         </ul></div>
+        <div class="topic"><h3>Agile auditing &amp; AI</h3><ul>
+          <li><b>Agile auditing</b> works in short cycles alongside agile development teams instead of one long audit at the end</li>
+          <li><b>AI/ML tools</b> are increasingly used to scan huge datasets for anomalies — but the auditor must still question how the algorithm reached its result before trusting it</li>
+        </ul></div>
       </div>
       <div class="terms">
         <span class="term"><b>Materiality</b> — how big/important an issue is</span>
@@ -418,6 +422,7 @@ footer.note{
         <div class="topic"><h3>Strategy &amp; structure</h3><ul>
           <li>IT strategy should <b>support the business strategy</b>, not run off on its own</li>
           <li>A <b>RACI</b> chart (Responsible, Accountable, Consulted, Informed) prevents "everyone assumed someone else was doing it"</li>
+          <li>The <b>Three Lines Model</b>: operational management owns risk day to day (1st line), risk/compliance functions oversee it (2nd line), and internal audit independently checks both (3rd line)</li>
         </ul></div>
         <div class="topic"><h3>Segregation of duties</h3><ul>
           <li>The person who <b>requests</b> a payment shouldn't also <b>approve</b> and <b>process</b> it</li>
@@ -456,10 +461,13 @@ footer.note{
         <div class="topic"><h3>Business case &amp; project management</h3><ul>
           <li>Before coding starts: a <b>business case</b> (why build this?) and a <b>feasibility study</b></li>
           <li>Projects run against a defined <b>scope, schedule, budget, and quality</b> target</li>
+          <li><b>Function point analysis</b> estimates how big/costly a system will be by counting its inputs, outputs, and files — before a line of code is written</li>
+          <li>A <b>Gantt chart</b> maps tasks against a timeline so schedule slippage is easy to spot</li>
         </ul></div>
         <div class="topic"><h3>Development approaches</h3><ul>
           <li><b>Waterfall</b> moves step-by-step: requirements → design → build → test → launch</li>
           <li><b>Agile</b> builds in short cycles (sprints) with frequent feedback</li>
+          <li><b>DevOps/DevSecOps</b> automates build-test-release so code ships continuously — security gets baked into every step (DevSecOps) rather than checked only at the end</li>
           <li>Neither is "correct" — the auditor checks the chosen approach was followed consistently</li>
         </ul></div>
         <div class="topic"><h3>Testing</h3><ul>
@@ -505,6 +513,7 @@ footer.note{
         <div class="topic"><h3>Data &amp; infrastructure</h3><ul>
           <li>Database management and network basics</li>
           <li>Risk of <b>end-user computing</b> — e.g. a critical spreadsheet built by one employee with no backup or review</li>
+          <li><b>Shadow IT</b> — apps or cloud services staff adopt without IT's knowledge, bypassing every control that was supposed to protect company data</li>
         </ul></div>
         <div class="topic"><h3>Business Impact Analysis (BIA)</h3><ul>
           <li>Before planning recovery, know what actually matters</li>
@@ -522,6 +531,7 @@ footer.note{
           <li><b>Warm site</b> — needs some setup</li>
           <li><b>Cold site</b> — empty shell needing days</li>
           <li>Regular, <b>tested</b> backups make recovery actually possible</li>
+          <li>The <b>3-2-1 rule</b>: keep 3 copies of data, on 2 different media types, with 1 copy offsite</li>
         </ul></div>
       </div>
       <div class="terms">
@@ -554,6 +564,11 @@ footer.note{
           <li><b>Authentication</b> — can you prove it? (e.g. password + phone code = <b>MFA</b>)</li>
           <li><b>Authorization</b> — what are you allowed to do?</li>
           <li>Give people only the access they need — <b>least privilege</b></li>
+        </ul></div>
+        <div class="topic"><h3>Modern identity concepts</h3><ul>
+          <li><b>Zero-Trust Architecture</b> — "never trust, always verify": no user or device is trusted by default, even inside the network</li>
+          <li><b>Privileged Access Management (PAM)</b> — extra controls around admin-level accounts, since they can do the most damage if compromised</li>
+          <li><b>Identity as a Service (IDaaS)</b> — outsourcing identity/login management to a cloud provider instead of running it in-house</li>
         </ul></div>
         <div class="topic"><h3>Network &amp; endpoint security</h3><ul>
           <li><b>Firewalls</b> control what traffic gets in or out</li>
